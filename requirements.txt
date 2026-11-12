@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+xgboost>=2.0.0
+bayesian-optimization
+sktime
+ipykernel
+jupyter
+
