@@ -1,0 +1,18 @@
+```{r}
+library(censobr)
+library(dplyr)
+library(arrow)
+# codigo ibge salvador 2927408
+dados_censo <-
+  censobr::read_households(year = 2000) %>%
+  filter(code_muni == 2927408) %>%
+  collect()
+write.csv(dados_censo, 'salvador.csv', row.names = FALSE)
+```
+
+```{r}
+library(censobr)
+
+# Abre o dicionário específico de domicílios do Censo 2000
+data_dictionary(year = 2000, dataset = "microdata")
+```
